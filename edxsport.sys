@@ -1,0 +1,91 @@
+# edxsport.sys configuration file
+#
+# This file configures the edxsport utility.
+#
+
+# System parameters are specifed here.
+#   logfile - Log messages to specified file
+#
+edxsport:
+	logfile = /edx/edxsport.log
+
+# EDX devices are specified here.  Each device will be passed through
+# to the specified TCP port via a symbolic link and a pseudo terminal.
+#   port     - TCP port number for device
+#   verbose  - set TRUE or YES to enable data trace to log file for this device
+#     
+/dev/edxtty001:
+	port = 7001
+
+/dev/edxtty002:
+	port = 7002
+
+/dev/edxtty003:
+	port = 7003
+
+/dev/edxtty004:
+	port = 7004
+
+/dev/edxtty005:
+	port = 7005
+
+/dev/edxtty006:
+	port = 7006
+
+/dev/edxtty007:
+	port = 7007
+
+/dev/edxtty008:
+	port = 7008
+
+/dev/edxtty009:
+	port = 7009
+
+/dev/edxtty010:
+	port = 7010
+
+/dev/edxtty011:
+	port = 7011
+
+/dev/edxtty012:
+	port = 7012
+
+/dev/edxtty013:
+	port = 7013
+
+/dev/edxtty014:
+	port = 7014
+
+/dev/edxtty015:
+	port = 7015
+
+/dev/edxtty016:
+	port = 7016
+
+/dev/edxtty017:
+	port = 7017
+
+/dev/edxtty018:
+	port = 7018
+
+/dev/edxtty019:
+	port = 7019
+
+/dev/edxtty020:
+	port = 7020
+
+/dev/edxtty021:
+	port = 7021
+
+/dev/edxtty022:
+	port = 7022
+
+/dev/edxtty023:
+	port = 7023
+
+/dev/edxtty024:
+	port = 7024
+
+/dev/edxtty025:
+	port = 7025
+

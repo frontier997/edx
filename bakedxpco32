@@ -1,0 +1,162 @@
+**********************************************************************
+*   MID-AMERICAN SYSGEN    5/97                                      *
+*                                                                    *
+*   $EDXDEFS SYSTEM DEFINITION FOR EDX/AIX SUPERVISOR/NUCLEUS        *
+*                                                                    *
+*   LINKED WITH EDXAXSY1/2/3 TO CREATE SYSTEM MODULE                 *
+*                                                                    *
+*                                                                    *
+*   *** NOTE *** COMPILE THIS VERSION UNDER EDX VERSION 6 ONLY ***   *
+*                                                                    *
+*                                                                    *
+*   WARNING: DO NOT CHANGE THE DISK STATEMENT IN ANY WAY.            *
+*                                                                    *
+**********************************************************************
+          PRINT     NODATA
+$EDXDEF   CSECT
+*****************************************
+*   EDX VERSION NUMBER.                 *
+*   THIS MUST FOLLOW THE $EDXDEF CSECT. *
+*   IT WILL BE STORED INTO $EDXFLGS     *
+*****************************************
+          $ID
+*****************************************
+*   DESCRIPTION OF NUC FILE.  THIS      *
+*   TEXT WILL BE DISPLAYED BY $LEVEL.   *
+*   ACTIVATE IT BY UNCOMMENTING THE     *
+*   FOLLOWING ENTRY STATMENT. THEN PUT  *
+*   YOUR DESCRIPTION BETWEEN THE QUOTES.*
+*   KEEP LENGTH LESS THEN 70 CHARACTORS.*
+*****************************************
+*         ENTRY   USRDESC
+USRDESC   TEXT    ' '
+*****************************************
+* $SYSCOM DEFINITIONS FOR FRONTER       *
+*****************************************
+SYSCOM    CSECT
+          QCB  
+          QCB
+          ECB   
+          ECB  
+          ENTRY   $EDXPTCH
+$EDXPTCH  DATA    128F'0'
+ENDCOMM   EQU     * 
+*****************************************
+*   SYSTEM MEMORY CONFIGURATION         *
+*****************************************
+          SYSPARTS  NUMPART=32,                                        X
+               PARTS=(32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32, X
+               32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32),       X
+               MAXPROG=(12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,  X
+               12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12)
+************
+               SYSPARMS  DATEFMT=MMDDYY,                               X
+               IABUF=40,                                               X
+               INITPRT=0,                                              X
+               LOGPART=0,                                              X
+               MECBLST=0,                                              X
+               TBPART=0,                                               X
+               VIRPART=0,                                              X
+               XPSSTK=40
+          SYSEND
+*****************************************
+*   DISK DEFINITION (MUST ONLY BE 2)    *
+*****************************************
+          DISK      DEVICE=4963-64,ADDRESS=48
+          DISK      DEVICE=4963-64,ADDRESS=49,END=YES
+*****************************************
+*   TIMER DEFINITION                    *
+*****************************************
+          TIMER     ADDRESS=40
+*****************************************
+*   TERMINAL/CCB DEFINITIONS            *
+*****************************************
+$SYSLOG   TERMINAL  DEVICE=4978,ADDRESS=68,HDCOPY=$SYSPRTR,PART=8 
+#SYSLOG   TERMINAL  DEVICE=4978,ADDRESS=02,HDCOPY=$SYSPRTR,PART=8 
+TERM2     TERMINAL  DEVICE=4978,ADDRESS=03,HDCOPY=$SYSPRTR,PART=10 
+TERM3     TERMINAL  DEVICE=4978,ADDRESS=04,HDCOPY=$SYSPRTR,PART=11 
+$104      TERMINAL  DEVICE=4978,ADDRESS=2A,HDCOPY=$SYSPRTR,PART=4 
+$142      TERMINAL  DEVICE=4978,ADDRESS=44,HDCOPY=$SYSPRTR,PART=7 
+$102      TERMINAL  DEVICE=4978,ADDRESS=74,HDCOPY=$SYSPRTR,PART=6 
+$121      TERMINAL  DEVICE=4978,ADDRESS=77,HDCOPY=$SYSPRTR,PART=5 
+$145      TERMINAL  DEVICE=4978,ADDRESS=79,HDCOPY=$SYSPRTR,PART=4 
+$111      TERMINAL  DEVICE=4978,ADDRESS=25,HDCOPY=$SYSPRTR,PART=4 
+$133      TERMINAL  DEVICE=4978,ADDRESS=26,HDCOPY=$SYSPRTR,PART=5 
+$114      TERMINAL  DEVICE=4978,ADDRESS=27,HDCOPY=$SYSPRTR,PART=5 
+$131      TERMINAL  DEVICE=4978,ADDRESS=28,HDCOPY=$SYSPRTR,PART=6 
+$149      TERMINAL  DEVICE=4978,ADDRESS=40,HDCOPY=$SYSPRTR,PART=6 
+*
+*  BLOCK MODE 3101 TERMINALS...
+*
+MODEM1    TERMINAL  DEVICE=ACCA,ADDRESS=60,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=12,HDCOPY=$SYSPRTR         
+MODEM2    TERMINAL  DEVICE=ACCA,ADDRESS=6A,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=13,HDCOPY=$SYSPRTR         
+MODEM3    TERMINAL  DEVICE=ACCA,ADDRESS=6B,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=14,HDCOPY=$SYSPRTR         
+MODEM4    TERMINAL  DEVICE=ACCA,ADDRESS=6C,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=15,HDCOPY=$SYSPRTR         
+MODEM5    TERMINAL  DEVICE=ACCA,ADDRESS=6D,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=16,HDCOPY=$SYSPRTR         
+MODEM6    TERMINAL  DEVICE=ACCA,ADDRESS=6E,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=17,HDCOPY=$SYSPRTR         
+MODEM7    TERMINAL  DEVICE=ACCA,ADDRESS=6F,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=18,HDCOPY=$SYSPRTR         
+MODEM8    TERMINAL  DEVICE=ACCA,ADDRESS=64,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=2,HDCOPY=$SYSPRTR         
+SCANNER1  TERMINAL  DEVICE=ACCA,ADDRESS=62,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR 
+SCANNER2  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER3  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER4  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER5  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER6  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER7  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+SCANNER8  TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7,HDCOPY=$SYSPRTR
+* CHARACTER MODE 3101 TERMINALS
+*
+*TERMCH1   TERMINAL  DEVICE=ACCA,ADDRESS=69,MODE=3101C,BITRATE=9600,    X
+*               LMODE=LOCAL,CODTYPE=ASCII,PART=15   
+*   PRINTER #1
+*
+$SYSPRTR  TERMINAL  DEVICE=4974,ADDRESS=21,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=9600,SPOOL=YES
+$SYSPRTC  TERMINAL  DEVICE=4974,ADDRESS=22,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=9600,SPOOL=YES
+$SYSPRTD  TERMINAL  DEVICE=4974,ADDRESS=23,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=19200,SPOOL=YES
+$SYSPRTE  TERMINAL  DEVICE=4974,ADDRESS=81,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=19200,SPOOL=YES
+$SYSPRTF  TERMINAL  DEVICE=4974,ADDRESS=81,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=19200,SPOOL=YES
+$SYSPRTG  TERMINAL  DEVICE=4974,ADDRESS=81,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=0,BOTM=64,NHIST=0,LINSIZE=254,LEFTM=0,  C
+               RIGHTM=253,OVFLINE=YES,BITRATE=19200,SPOOL=YES
+****************************************************************
+*   VIRTUAL TERMINAL DEFINITIONS                               *
+****************************************************************
+CDRVTA    TERMINAL  DEVICE=VIRT,ADDRESS=CDRVTB,SYNC=YES
+CDRVTB    TERMINAL  DEVICE=VIRT,ADDRESS=CDRVTA,SYNC=NO,END=YES
+*******************************************************
+*   LOCATION WHERE NEW TERMINALS WILL BE CREATED      *
+*   LATER BY BLDNUC.                                  *
+*   THIS SHOULD FOLLOW THE LAST TERMINAL STATMENT     *
+*******************************************************
+          ENTRY   NEWCCBA
+NEWCCBA   EQU     *
+*
+*   END OF SYSTEM DEFINITION
+*
+          END

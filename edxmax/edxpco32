@@ -1,0 +1,147 @@
+**********************************************************************
+*   PIMA COUNTY SYSGEN     6/9/96                                    *
+*                                                                    *
+*   $EDXDEFS SYSTEM DEFINITION FOR EDX/AIX SUPERVISOR/NUCLEUS        *
+*                                                                    *
+*   LINKED WITH EDXAXSY1/2/3 TO CREATE SYSTEM MODULE                 *
+*                                                                    *
+*                                                                    *
+*   *** NOTE *** COMPILE THIS VERSION UNDER EDX VERSION 6 ONLY ***   *
+*                                                                    *
+*                                                                    *
+*   WARNING: DO NOT CHANGE THE DISK STATEMENT IN ANY WAY.            *
+*                                                                    *
+**********************************************************************
+          PRINT     NODATA
+$EDXDEF   CSECT
+*****************************************
+*   EDX VERSION NUMBER.                 *
+*   THIS MUST FOLLOW THE $EDXDEF CSECT. *
+*   IT WILL BE STORED INTO $EDXFLGS     *
+*****************************************
+          $ID
+*****************************************
+*   DESCRIPTION OF NUC FILE.  THIS      *
+*   TEXT WILL BE DISPLAYED BY $LEVEL.   *
+*   ACTIVATE IT BY UNCOMMENTING THE     *
+*   FOLLOWING ENTRY STATMENT. THEN PUT  *
+*   YOUR DESCRIPTION BETWEEN THE QUOTES.*
+*   KEEP LENGTH LESS THEN 70 CHARACTORS.*
+*****************************************
+*         ENTRY   USRDESC
+USRDESC   TEXT    ' '
+*****************************************
+* $SYSCOM DEFINITIONS FOR PROMPT 9      *
+*****************************************
+SYSCOM    CSECT
+DATOP     QCB     -1      PV9 OPENDAT/CLOSDAT QCB
+          QCB     -1      PV9 RESERVED
+PDSOP     QCB     -1      PV9 PDSOP QCB
+RLOCK     QCB     -1      PV9 LOCK/UNLOCK
+DATCL     ECB     -1      PV9 OPENDAT/CLOSEDAT ECB
+RULOK     ECB     -1      PV9 LOCK/UNLOCK ECB
+PRENTS    DC      F'30'   NO TABLE ENTRIES
+PROTECT   DC      D'-1'   END OF LOCK TABLE
+          DC      270X'00'
+ENDCOMM   EQU     *
+*****************************************
+*   SYSTEM MEMORY CONFIGURATION         *
+*****************************************
+          SYSPARTS  NUMPART=32,                                        X
+               PARTS=(32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32, X
+               32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32),       X
+               MAXPROG=(10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,  X
+               10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10)
+          SYSEND
+*****************************************
+*   DISK DEFINITION (MUST ONLY BE 1)    *
+*****************************************
+          DISK      DEVICE=4963-64,ADDRESS=48,END=YES
+*****************************************
+*   TIMER DEFINITION                    *
+*****************************************
+          TIMER     ADDRESS=40
+*****************************************
+*   TERMINAL/CCB DEFINITIONS            *
+*****************************************
+$SYSLOG   TERMINAL  DEVICE=4978,ADDRESS=68,HDCOPY=$SYSPRTR,PART=2
+#SYSLOG   TERMINAL  DEVICE=4978,ADDRESS=02,HDCOPY=$SYSPRTR,PART=4
+TERM2     TERMINAL  DEVICE=4978,ADDRESS=03,HDCOPY=$SYSPRTR,PART=2
+TERM3     TERMINAL  DEVICE=4978,ADDRESS=04,HDCOPY=$SYSPRTR,PART=3
+TERM4     TERMINAL  DEVICE=4978,ADDRESS=05,HDCOPY=$SYSPRTR,PART=3
+TERM5     TERMINAL  DEVICE=4978,ADDRESS=06,HDCOPY=$SYSPRTR,PART=3
+TERM6     TERMINAL  DEVICE=4978,ADDRESS=07,HDCOPY=$SYSPRTR,PART=4
+TERM7     TERMINAL  DEVICE=4978,ADDRESS=08,HDCOPY=$SYSPRTR,PART=4
+TERM8     TERMINAL  DEVICE=4978,ADDRESS=09,HDCOPY=$SYSPRTR,PART=4
+TERM9     TERMINAL  DEVICE=4978,ADDRESS=0A,HDCOPY=$SYSPRTR,PART=5
+TERM10    TERMINAL  DEVICE=4978,ADDRESS=0B,HDCOPY=$SYSPRTR,PART=5
+*
+*  BLOCK MODE 3101 TERMINALS...
+*
+T59       TERMINAL  DEVICE=ACCA,ADDRESS=59,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=2
+T5A       TERMINAL  DEVICE=ACCA,ADDRESS=5A,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=3
+T5B       TERMINAL  DEVICE=ACCA,ADDRESS=5B,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=4
+T5C       TERMINAL  DEVICE=ACCA,ADDRESS=5C,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=5
+T5D       TERMINAL  DEVICE=ACCA,ADDRESS=5D,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=6
+T5E       TERMINAL  DEVICE=ACCA,ADDRESS=5E,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7
+T5F       TERMINAL  DEVICE=ACCA,ADDRESS=5F,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=8
+T60       TERMINAL  DEVICE=ACCA,ADDRESS=60,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=1
+T61       TERMINAL  DEVICE=ACCA,ADDRESS=61,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=3
+T62       TERMINAL  DEVICE=ACCA,ADDRESS=62,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=4
+T63       TERMINAL  DEVICE=ACCA,ADDRESS=63,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=5
+T64       TERMINAL  DEVICE=ACCA,ADDRESS=64,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=6
+T65       TERMINAL  DEVICE=ACCA,ADDRESS=65,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=7
+T66       TERMINAL  DEVICE=ACCA,ADDRESS=66,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=8
+T67       TERMINAL  DEVICE=ACCA,ADDRESS=67,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=1
+T69       TERMINAL  DEVICE=ACCA,ADDRESS=69,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=1
+T6A       TERMINAL  DEVICE=ACCA,ADDRESS=6A,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=3
+T6B       TERMINAL  DEVICE=ACCA,ADDRESS=6B,MODE=3101B,BITRATE=19200,   X
+               LMODE=LOCAL,CODTYPE=ASCII,PART=4
+* CHARACTER MODE 3101 TERMINALS
+*
+TERMCH1 TERMINAL DEVICE=ACCA,MODE=3101C,ADDRESS=16,PART=9,CODTYPE=ASCII
+*
+*   PRINTER #1
+*
+$SYSPRTR  TERMINAL  DEVICE=4974,ADDRESS=58,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=3,BOTM=63,NHIST=0,LINSIZE=132,LEFTM=0,  C
+               RIGHTM=131,OVFLINE=YES
+$SYSPRT2  TERMINAL  DEVICE=4974,ADDRESS=53,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=3,BOTM=63,NHIST=0,LINSIZE=132,LEFTM=0,  C
+               RIGHTM=131,OVFLINE=YES
+$SYSPRT3  TERMINAL  DEVICE=4974,ADDRESS=11,CODTYPE=ASCII,              C
+               PAGSIZE=66,TOPM=3,BOTM=63,NHIST=0,LINSIZE=132,LEFTM=0,  C
+               RIGHTM=131,OVFLINE=YES
+****************************************************************
+*   VIRTUAL TERMINAL DEFINITIONS                               *
+****************************************************************
+CDRVTA    TERMINAL  DEVICE=VIRT,ADDRESS=CDRVTB,SYNC=YES
+CDRVTB    TERMINAL  DEVICE=VIRT,ADDRESS=CDRVTA,SYNC=NO,END=YES
+*******************************************************
+*   LOCATION WHERE NEW TERMINALS WILL BE CREATED      *
+*   LATER BY BLDNUC.                                  *
+*   THIS SHOULD FOLLOW THE LAST TERMINAL STATMENT     *
+*******************************************************
+          ENTRY   NEWCCBA
+NEWCCBA   EQU     *
+*
+*   END OF SYSTEM DEFINITION
+*
+          END

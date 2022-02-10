@@ -1,0 +1,158 @@
+1209105648  - Starting version 1.3 with process id 4380
+1209105648 /dev/edxtty001 - Started port 7001 on /dev/pts/0
+1209105648 /dev/edxtty001 - Listening on port 7001
+1209105648 /dev/edxtty002 - Started port 7002 on /dev/pts/1
+1209105648 /dev/edxtty002 - Listening on port 7002
+1209105648 /dev/edxtty003 - Started port 7003 on /dev/pts/2
+1209105648 /dev/edxtty003 - Listening on port 7003
+1209105648 /dev/edxtty004 - Started port 7004 on /dev/pts/3
+1209105648 /dev/edxtty004 - Listening on port 7004
+1209105648 /dev/edxtty005 - Started port 7005 on /dev/pts/4
+1209105648 /dev/edxtty005 - Listening on port 7005
+1209105648 /dev/edxtty006 - Started port 7006 on /dev/pts/5
+1209105648 /dev/edxtty006 - Listening on port 7006
+1209105648 /dev/edxtty007 - Started port 7007 on /dev/pts/6
+1209105648 /dev/edxtty007 - Listening on port 7007
+1209105648 /dev/edxtty008 - Started port 7008 on /dev/pts/7
+1209105648 /dev/edxtty008 - Listening on port 7008
+1209105648 /dev/edxtty009 - Started port 7009 on /dev/pts/8
+1209105648 /dev/edxtty009 - Listening on port 7009
+1209105648 /dev/edxtty010 - Started port 7010 on /dev/pts/9
+1209105648 /dev/edxtty010 - Listening on port 7010
+1209105648 /dev/edxtty011 - Started port 7011 on /dev/pts/10
+1209105648 /dev/edxtty011 - Listening on port 7011
+1209105648 /dev/edxtty012 - Started port 7012 on /dev/pts/11
+1209105648 /dev/edxtty012 - Listening on port 7012
+1209105648 /dev/edxtty013 - Started port 7013 on /dev/pts/12
+1209105648 /dev/edxtty013 - Listening on port 7013
+1209105648 /dev/edxtty014 - Started port 7014 on /dev/pts/13
+1209105648 /dev/edxtty014 - Listening on port 7014
+1209105648 /dev/edxtty015 - Started port 7015 on /dev/pts/14
+1209105648 /dev/edxtty015 - Listening on port 7015
+1209105648 /dev/edxtty016 - Started port 7016 on /dev/pts/15
+1209105648 /dev/edxtty016 - Listening on port 7016
+1209105648 /dev/edxtty017 - Started port 7017 on /dev/pts/16
+1209105648 /dev/edxtty017 - Listening on port 7017
+1209105648 /dev/edxtty018 - Started port 7018 on /dev/pts/17
+1209105648 /dev/edxtty019 - Started port 7019 on /dev/pts/18
+1209105648 /dev/edxtty020 - Started port 7020 on /dev/pts/19
+1209105648 /dev/edxtty021 - Started port 7021 on /dev/pts/20
+1209105648 /dev/edxtty022 - Started port 7022 on /dev/pts/21
+1209105648 /dev/edxtty023 - Started port 7023 on /dev/pts/22
+1209105648 /dev/edxtty024 - Started port 7024 on /dev/pts/23
+1209105648 /dev/edxtty025 - Started port 7025 on /dev/pts/24
+1209105648 /dev/edxtty018 - Listening on port 7018
+1209105648 /dev/edxtty019 - Listening on port 7019
+1209105648 /dev/edxtty020 - Listening on port 7020
+1209105648 /dev/edxtty021 - Listening on port 7021
+1209105648 /dev/edxtty022 - Listening on port 7022
+1209105648 /dev/edxtty023 - Listening on port 7023
+1209105648 /dev/edxtty024 - Listening on port 7024
+1209105648 /dev/edxtty025 - Listening on port 7025
+1209105651 /dev/edxtty014 - pty data ignored
+1209105651 /dev/edxtty001 - pty data ignored
+1209105651 /dev/edxtty014 - pty data ignored
+1209105651 /dev/edxtty014 - pty data ignored
+1209105651 /dev/edxtty014 - pty data ignored
+1209105651 /dev/edxtty014 - pty data ignored
+1209105651 /dev/edxtty001 - pty data ignored
+1209105651 /dev/edxtty001 - pty data ignored
+1209105651 /dev/edxtty001 - pty data ignored
+1209105651 /dev/edxtty001 - pty data ignored
+1209105651 /dev/edxtty003 - pty data ignored
+1209105651 /dev/edxtty004 - pty data ignored
+1209105651 /dev/edxtty003 - pty data ignored
+1209105651 /dev/edxtty003 - pty data ignored
+1209105651 /dev/edxtty003 - pty data ignored
+1209105651 /dev/edxtty003 - pty data ignored
+1209105651 /dev/edxtty002 - pty data ignored
+1209105651 /dev/edxtty004 - pty data ignored
+1209105651 /dev/edxtty004 - pty data ignored
+1209105651 /dev/edxtty004 - pty data ignored
+1209105651 /dev/edxtty004 - pty data ignored
+1209105651 /dev/edxtty013 - pty data ignored
+1209105651 /dev/edxtty002 - pty data ignored
+1209105651 /dev/edxtty002 - pty data ignored
+1209105651 /dev/edxtty002 - pty data ignored
+1209105651 /dev/edxtty002 - pty data ignored
+1209105651 /dev/edxtty007 - pty data ignored
+1209105651 /dev/edxtty013 - pty data ignored
+1209105651 /dev/edxtty013 - pty data ignored
+1209105651 /dev/edxtty013 - pty data ignored
+1209105651 /dev/edxtty013 - pty data ignored
+1209105651 /dev/edxtty007 - pty data ignored
+1209105651 /dev/edxtty007 - pty data ignored
+1209105651 /dev/edxtty007 - pty data ignored
+1209105651 /dev/edxtty007 - pty data ignored
+1209105651 /dev/edxtty005 - pty data ignored
+1209105651 /dev/edxtty011 - pty data ignored
+1209105651 /dev/edxtty005 - pty data ignored
+1209105651 /dev/edxtty005 - pty data ignored
+1209105651 /dev/edxtty005 - pty data ignored
+1209105651 /dev/edxtty005 - pty data ignored
+1209105651 /dev/edxtty011 - pty data ignored
+1209105651 /dev/edxtty011 - pty data ignored
+1209105651 /dev/edxtty011 - pty data ignored
+1209105651 /dev/edxtty011 - pty data ignored
+1209105651 /dev/edxtty010 - pty data ignored
+1209105651 /dev/edxtty006 - pty data ignored
+1209105651 /dev/edxtty010 - pty data ignored
+1209105651 /dev/edxtty010 - pty data ignored
+1209105651 /dev/edxtty010 - pty data ignored
+1209105651 /dev/edxtty010 - pty data ignored
+1209105651 /dev/edxtty015 - pty data ignored
+1209105651 /dev/edxtty006 - pty data ignored
+1209105651 /dev/edxtty006 - pty data ignored
+1209105651 /dev/edxtty006 - pty data ignored
+1209105651 /dev/edxtty006 - pty data ignored
+1209105651 /dev/edxtty008 - pty data ignored
+1209105651 /dev/edxtty015 - pty data ignored
+1209105651 /dev/edxtty015 - pty data ignored
+1209105651 /dev/edxtty015 - pty data ignored
+1209105651 /dev/edxtty015 - pty data ignored
+1209105651 /dev/edxtty008 - pty data ignored
+1209105651 /dev/edxtty008 - pty data ignored
+1209105651 /dev/edxtty008 - pty data ignored
+1209105651 /dev/edxtty008 - pty data ignored
+1209105651 /dev/edxtty009 - pty data ignored
+1209105651 /dev/edxtty009 - pty data ignored
+1209105651 /dev/edxtty009 - pty data ignored
+1209105651 /dev/edxtty009 - pty data ignored
+1209105651 /dev/edxtty009 - pty data ignored
+1209105651 /dev/edxtty012 - pty data ignored
+1209105651 /dev/edxtty012 - pty data ignored
+1209105651 /dev/edxtty012 - pty data ignored
+1209105651 /dev/edxtty012 - pty data ignored
+1209105651 /dev/edxtty012 - pty data ignored
+1209110001 /dev/edxtty007 - Accepted connection from 0a000048
+1209110001 /dev/edxtty007 - Ignore IAC 253 1
+1209110001 /dev/edxtty007 - Ignore IAC 253 3
+1209110001 /dev/edxtty007 - Ignore IAC 251 31
+1209110001 /dev/edxtty007 - Ignore IAC 254 37
+1209110001 /dev/edxtty007 - Ignore IAC 252 37
+1209121238 /dev/edxtty005 - Accepted connection from 0a00005c
+1209121238 /dev/edxtty005 - Ignore IAC 253 1
+1209121238 /dev/edxtty005 - Ignore IAC 253 3
+1209121238 /dev/edxtty005 - Ignore IAC 251 31
+1209121238 /dev/edxtty005 - Ignore IAC 254 37
+1209121238 /dev/edxtty005 - Ignore IAC 252 37
+1209124610 /dev/edxtty003 - Accepted connection from c0a80604
+1209124610 /dev/edxtty003 - Ignore IAC 253 1
+1209124610 /dev/edxtty003 - Ignore IAC 253 3
+1209124610 /dev/edxtty003 - Ignore IAC 251 31
+1209124610 /dev/edxtty003 - Ignore IAC 254 37
+1209124610 /dev/edxtty003 - Ignore IAC 252 37
+1209135833 /dev/edxtty005 - Accepted connection from 0a00005c
+1209135833 /dev/edxtty005 - Ignore IAC 253 1
+1209135833 /dev/edxtty005 - Ignore IAC 253 3
+1209135833 /dev/edxtty005 - Ignore IAC 251 31
+1209135833 /dev/edxtty005 - Ignore IAC 254 37
+1209135833 /dev/edxtty005 - Ignore IAC 252 37
+1209165034 /dev/edxtty007 - Socket disconnect
+1209183713 /dev/edxtty005 - Socket read error 110
+1210085945 /dev/edxtty007 - Accepted connection from 0a000048
+1210085945 /dev/edxtty007 - Ignore IAC 253 1
+1210085945 /dev/edxtty007 - Ignore IAC 253 3
+1210085945 /dev/edxtty007 - Ignore IAC 251 31
+1210085945 /dev/edxtty007 - Ignore IAC 254 37
+1210085945 /dev/edxtty007 - Ignore IAC 252 37

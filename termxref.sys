@@ -1,0 +1,139 @@
+#
+# Program check messages sent to file
+#
+PROGCHECK /edx/progcheck:
+        REWIND=YES
+        PCDUMP /edx/dump
+        PANICDUMP /edx/dump
+
+#
+# Terminal defaults
+#
+default:
+     TERM=linux
+     TAB = ^["A
+     BTAB = 2
+     CASE = EITHER
+     IC = ^[P
+     CEOF=^[I
+
+#
+# These parameter along with the defaults above apply to 
+# the ternimals on any device
+#
+$SYSLOG: 
+        attn=8
+        VIRLOG /edx/virlog.txt
+        VIRLOGSIZE 50000
+\#SYSLOG /dev/tty2:
+*TERM2  /dev/tty3:
+*TERM3  /dev/tty4:
+
+#
+# These lines will specify a tty for terminals start automatically by edxnuc
+# The default stanza above will apply to these terminals.
+# $SYSLOGX-Z are examples of workstation setup 
+# $SYSLOGX  /dev/ttyD000:   Digi
+# $SYSLOGY  /dev/ttyS0:     Com1
+# $SYSLOGZ  /dev/edxtty00a: Network
+#
+
+$SYSLOG  /dev/tty1:
+
+$104 /dev/edxtty001:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$142 /dev/edxtty002:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$102 /dev/edxtty003:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$202 /dev/edxtty004:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$121 /dev/edxtty005:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$145 /dev/edxtty006:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$111 /dev/edxtty007:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$117 /dev/edxtty008:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$114 /dev/edxtty009:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$183 /dev/edxtty010:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$140 /dev/edxtty011:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$150 /dev/edxtty012:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$160 /dev/edxtty013:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$170 /dev/edxtty014:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$180 /dev/edxtty015:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+SCANNER1 /dev/tty016:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$190 /dev/edxtty017:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$200 /dev/edxtty018:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$210 /dev/edxtty019:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$220 /dev/edxtty020:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$230 /dev/edxtty021:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$240 /dev/edxtty022:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$250 /dev/edxtty023:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$260 /dev/edxtty024:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+$270 /dev/edxtty025:
+     stty = cs8 -parenb ixon opost onlcr icrnl 19200
+BCPRTR /dev/ttyS0:
+     TERM = ibm3151
+     stty = opost onlcr icrnl 9600
+#
+# Printer defaults
+#
+default:
+     CRLF=YES
+     CLOSE=PROGSTOP
+
+#$SYSPRTD /dev/ttyS0:
+
+#
+# Send print output to parallel port using EDX/UNX spooler
+#
+#$SYSPRTR /dev/lp0:
+#    EDXSPOOL=/edx/spool
+#    SPLSTAT=dispatch
+
+
+#
+# Send print output to Linux spooler
+#
+
+$SYSPRTR | lpr -Psys:
+$SYSPRTA | lpr -Psya:
+$SYSPRTB | lpr -Psyb:
+$SYSPRTC | lpr -Psy1:
+$SYSPRTD | lpr -Psyd:
+$SYSPRTE | lpr -Psye:
+$SYSPRTF | lpr -Psyf:
+$SYSPRTG | lpr -Psyg:
+$SYSPRTH | lpr -Psyh:
+$SYSPRTJ | lpr -Psyj:
+$SYSPRTK | lpr -Psyk:
+$SYSPRTL | lpr -Psyl:
+
+#
+# Send print output to file
+#
+#$SYSPRTR /edx/sysprtr:
+
+#
+# Turn off defaults for any CCB not specified explicitly in this file
+#
+default:
+
