@@ -12,6 +12,8 @@ Code documentation:
 
 * <b>ipledx</b> - edx device / pc user paths
 
+Code excerpt indicates 15 workstations in the path structure:
+
 ```console
 PATH=$PATH:/edx/bin:
 export PATH
