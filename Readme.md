@@ -48,3 +48,8 @@ BLDNUC:
 	base=/edx/edx002/edxpcnuc.edx
 	output=/edx/edx002/edxnuc02.edx
 ```
+
+
+Associated code referencing edxnuc drivers:
+
+* <b>volxref.sys</b> - $$$EDXNUC is a required stanza which names the sysgen module and the default volume.
