@@ -1,2 +1,2 @@
 
-### This project contains the edx series 1 emulator.
+### This repository contains the edx series 1 emulator.
