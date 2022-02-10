@@ -1,7 +1,9 @@
 
-### This repository contains the edx series 1 emulator.
+## This repository contains the edx series 1 emulator.
 
-Code documentation:
+<hr>
+
+### Code documentation:
 
 * <b>edxsport.sys</b> configuration file supporting the edxsport utility controls for:
   * logfile /edx/edxsport.log
