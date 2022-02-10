@@ -9,7 +9,7 @@ Code documentation:
   * EDX devices are specified here.  Each device will be passed through to the specified TCP port via a symbolic link and a pseudo terminal.
   * TCP port number for device
 
-
+<hr>
 * <b>ipledx</b> - edx device / pc user paths
 
 Code excerpt indicates 15 workstations in the path structure:
@@ -38,3 +38,13 @@ edx -B -d /dev/edxtty015
 # you must delete the command below for that port
 edx -B -d /dev/ttyS0
 ```console
+
+<hr>
+
+* <b> nucxref.sys </b> base and output paths for edxnuc 
+
+```console
+BLDNUC:
+	base=/edx/edx002/edxpcnuc.edx
+	output=/edx/edx002/edxnuc02.edx
+```
