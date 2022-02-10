@@ -56,7 +56,7 @@ Associated sys files and code excerpts with internal docstrings referencing edxn
 
 * <b>volxref.sys</b> - $$$EDXNUC is a required stanza which names the sysgen module and the default volume.
 
-This sys file appears to define volume mappings for the full system. 
+This sys file appears to define volume mappings and parameter references for data migration.
 
 ```console
 # Individual volume stanzas match the VOL parameters specified in the $$$DISK??
