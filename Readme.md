@@ -37,7 +37,7 @@ edx -B -d /dev/edxtty015
 # if you use one of these ports for a printer
 # you must delete the command below for that port
 edx -B -d /dev/ttyS0
-```console
+```
 
 <hr>
 
