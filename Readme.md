@@ -14,7 +14,7 @@
 <hr>
 * <b>ipledx</b> - edx device / pc user paths
 
-Code excerpt indicates 15 workstation ports and asssociated unix path structure:
+Code excerpt indicates 15 workstation ports and asssociated linux path structure:
 
 ```console
 PATH=$PATH:/edx/bin:
