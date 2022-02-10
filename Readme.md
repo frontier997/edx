@@ -56,6 +56,38 @@ Associated sys files and code excerpts with internal docstrings referencing edxn
 
 * <b>volxref.sys</b> - $$$EDXNUC is a required stanza which names the sysgen module and the default volume.
 
+This sys file appears to define volume mappings for the full system. 
+
+```console
+# Individual volume stanzas match the VOL parameters specified in the $$$DISK??
+# stanzas.  Volume stanzas are only requred to specify a path other than
+# the default path created by appending the volume name to the $EDXDIR
+# directory, or to specify optional parameters for the volume.  
+#
+# Parameter   		Description
+# ---------   		-----------
+# MODE [RO | RW]	Specify read-only or read-write volume
+# FASTLOAD <program>	Specify a program to be cached for fast loading.
+#
+EDX001 /edx/edx001:
+EDX002 /edx/edx002:
+EDX003 /edx/edx003:
+EDX004 /edx/edx004:
+EDX005 /edx/edx005:
+OBJLIB /edx/objlib:
+SOURCE /edx/source:
+OLD002 /edx/old002:
+NEW002 /edx/new002:
+ASMLIB /edx/asmlib:
+ASMMAC /edx/asmmac:
+EDXMAX /edx/edxmax:
+ARC1 /edx/arc1:
+BAK003 /edx/bak003:
+BAK004 /edx/bak004:
+BAK005 /edx/bak005:
+```
+
+
 * <b> termxref.sys </b>
 
 ```console
