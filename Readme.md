@@ -41,6 +41,8 @@ edx -B -d /dev/ttyS0
 
 <hr>
 
+#### edxnuc -- edxnuc appears to be a primary program driver
+
 * <b> nucxref.sys </b> base and output paths for edxnuc 
 
 ```console
@@ -50,6 +52,19 @@ BLDNUC:
 ```
 
 
-Associated code referencing edxnuc drivers:
+Associated sys files and code excerpts with internal docstrings referencing edxnuc:
 
 * <b>volxref.sys</b> - $$$EDXNUC is a required stanza which names the sysgen module and the default volume.
+
+* <b> termxref.sys </b>
+
+```console
+# These lines will specify a tty for terminals start automatically by edxnuc
+# The default stanza above will apply to these terminals.
+# $SYSLOGX-Z are examples of workstation setup 
+# $SYSLOGX  /dev/ttyD000:   Digi
+# $SYSLOGY  /dev/ttyS0:     Com1
+# $SYSLOGZ  /dev/edxtty00a: Network
+```
+
+
